@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CartFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cartRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:visibility="visible"
+        android:layout_above="@id/bottom_cart_final"/>
+
+    <ImageView
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:id="@+id/cartEmpty"
+        android:src="@drawable/empty_cart"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:layout_above="@id/bottom_cart_final"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/bottom_cart_final"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2"
+        android:paddingTop="10sp"
+        android:paddingBottom="10sp"
+        android:paddingStart="15sp"
+        android:paddingEnd="15sp"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/grandTotalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:text="Grand Total:"
+                android:fontFamily="@font/font_regular"
+                android:layout_alignParentStart="true"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/finalCartAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:fontFamily="@font/font_regular"
+                android:gravity="center"
+                android:layout_toEndOf="@id/grandTotalText"
+                android:layout_marginStart="5sp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/placeOrderButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            android:text="Place Order"
+            android:fontFamily="@font/font_regular"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@color/pinkish"
+            android:paddingTop="10sp"
+            android:paddingBottom="10sp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

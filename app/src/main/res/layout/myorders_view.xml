@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15sp"
+    android:background="@drawable/item_card_back"
+    android:orientation="vertical"
+    android:paddingTop="10sp"
+    android:paddingBottom="10sp"
+    android:paddingStart="10sp"
+    android:paddingEnd="10sp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/nameInfo">
+
+            <TextView
+                android:id="@+id/showOrderItemNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order Number"
+                android:textSize="20sp"
+                android:fontFamily="@font/font_regular"
+                android:textColor="@color/black"
+                android:padding="3sp"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/showItems"
+                    android:text="Total:"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/font_regular"
+                    android:textColor="#808080"
+                    android:padding="3sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/showOrderTotalAmount"
+                    android:text="Amount"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/font_regular"
+                    android:textColor="@color/black"
+                    android:padding="3sp"
+                    android:layout_marginStart="5sp"
+                    android:layout_toEndOf="@id/showItems"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/showOrderDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="5sp"
+            android:text="See Details"
+            android:fontFamily="@font/font_regular"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

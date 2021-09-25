@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15sp"
+    android:background="@drawable/item_card_back"
+    android:orientation="horizontal"
+    android:paddingTop="10sp"
+    android:paddingBottom="10sp"
+    android:weightSum="1"
+    android:paddingStart="10sp"
+    android:paddingEnd="10sp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.6"
+        android:orientation="vertical"
+        android:layout_gravity="center_vertical"
+        android:paddingStart="15sp"
+        tools:ignore="RtlSymmetry">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/showCartItemName"
+            android:text="Item Name"
+            android:textSize="18sp"
+            android:fontFamily="@font/font_regular"
+            android:textColor="@color/black"
+            android:padding="3sp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/showAmount"
+                android:text="Amount:"
+                android:textSize="18sp"
+                android:fontFamily="@font/font_regular"
+                android:textColor="#808080"
+                android:padding="3sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/showItemAmount"
+                android:text="Amount"
+                android:textSize="18sp"
+                android:fontFamily="@font/font_regular"
+                android:textColor="@color/black"
+                android:padding="3sp"
+                android:layout_marginStart="5sp"
+                android:layout_toEndOf="@+id/showAmount"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/decreaseByOne"
+            android:layout_width="0dp"
+            android:layout_height="40sp"
+            android:layout_weight="1"
+            android:text="-"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:background="@color/pinkish"
+            tools:ignore="NestedWeights" />
+
+        <TextView
+            android:id="@+id/showItemCount"
+            android:layout_width="0dp"
+            android:layout_height="40sp"
+            android:layout_weight="1"
+            android:text="1"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            tools:ignore="NestedWeights" />
+
+        <TextView
+            android:id="@+id/increaseByOne"
+            android:layout_width="0dp"
+            android:layout_height="40sp"
+            android:layout_weight="1"
+            android:text="+"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:background="@color/pinkish"
+            tools:ignore="NestedWeights" />
+
+    </LinearLayout>
+
+</LinearLayout>
